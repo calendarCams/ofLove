@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ff69b4; /* Rose */
+    background: linear-gradient(135deg, #ff69b4 25%, #ff1493 50%, #ff69b4 75%);
+    background-size: 400% 400%;
+    animation: glitter 3s ease-in-out infinite;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.password-container label {
+   color: #fff;
+}
+
+.hint {
+    color: #fff;
+    font-size: 7px;
+    margin-bottom: 10px;
+}
+
+.password-container input[type="password"] {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    margin: 5px;
+}
+
+.password-container button {
+    margin-top: 10px;
+}
+
+.container {
+    display: none;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+
+@keyframes glitter {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.calendar {
+    width: 360px;
+    display: ruby-text;
+}
+
+.day {
+    position: relative;
+    width: 60px;
+    height: 80px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0% 100%, 0% 35%);
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.day::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 20px solid #fff;
+    transition: border-bottom-color 0.3s ease-in-out;
+}
+
+.day:hover {
+    background-color: #f9c2c2;
+    transform: translateY(-5px);
+}
+
+.day.disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+.day.disabled::before {
+    border-bottom-color: #e0e0e0;
+}
+
+.day.disabled:hover {
+    transform: none;
+}
+
