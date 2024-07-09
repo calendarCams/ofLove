@@ -68,7 +68,8 @@ body {
 
 .calendar {
     width: 360px;
-    display: ruby-text;
+    display: flex;
+    flex-direction: row;    
 }
 
 .day {
