@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #ff69b4; /* Rose */
+    color: #ff69b4;
     background: linear-gradient(135deg, #ff69b4 25%, #ff1493 50%, #ff69b4 75%);
     background-size: 400% 400%;
     animation: glitter 3s ease-in-out infinite;
