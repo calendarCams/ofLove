@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 Swal.fire({
                     icon: 'warning',
                     title: 'Trop tôt!',
-                    text: `Vous devez attendre jusqu'au ${dayDate.toLocaleString()} pour ouvrir cette case.`,
+                    text: `Tu dois attendre jusqu'au ${dayDate.toLocaleString()} pour ouvrir cette case, deso mon gaté...`,
                 });
             } else {
                 Swal.fire({
